@@ -206,6 +206,7 @@ class MainActivity : AppCompatActivity() {
             //情報表示
             fInformationTextView("新しいページ[${gPageNo}]です")
         }
+        // ページ番号表示
         fPageTextView()
     }
 
