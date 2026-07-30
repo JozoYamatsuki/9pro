@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 土台の上下をマイナス値にして枠線をエリア外に描く（枠線の太さ以上を指定） -->
+    <item
+        android:top="-2dp"
+        android:bottom="-2dp">
+        <shape>
+            <!-- 枠線の太さと色 -->
+            <stroke
+                android:width="1dp"
+                android:color="#808080" />
+            <!-- 背景色 -->
+            <solid android:color="#E6E6FF" />
+        </shape>
+    </item>
+</layer-list>
