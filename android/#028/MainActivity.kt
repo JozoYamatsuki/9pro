@@ -86,6 +86,7 @@ class MainActivity : AppCompatActivity() {
     var gPageMax: Int = 5
     // 現在表示中のページ番号
     var gPageNo: Int = 1
+
     // 目次ページから戻る際のページ番号
     var gReturnPageNo = 0
 
@@ -240,6 +241,7 @@ class MainActivity : AppCompatActivity() {
             fStateRestore()
         }
 
+
         // 色設定
         // ナビゲーションバー
         window.navigationBarColor = Color.rgb(0xad,0xbf,0xd9)
@@ -325,15 +327,44 @@ class MainActivity : AppCompatActivity() {
         }
 
         // 画面をタッチされた時のリスナー
-        gEditText?.setOnTouchListener { v, event ->
-            // 目次表示中のクリックdownなら
-            if (gPageNo <= 0 && event.action == MotionEvent.ACTION_DOWN) {
-                // 終了（イベントを消費して、EditTextの標準動作『フォーカス・キーボード表示』をブロックする）
-                return@setOnTouchListener true
+        gEditText?.setOnTouchListener { view, event ->
+            // 目次表示中のクリックupなら
+            if (gPageNo == 0 && event.action == MotionEvent.ACTION_UP) {
+                // カーソル表示が完了した後の処理を定義しておく
+                view.post {
+                    // クリックした行番号を取得し、それを飛び先のページ番号としてセットする
+                    gPageNo = fGetLineNoFromCursorPosition()
+                    // テキスト読込
+                    fLoadText()
+                    // カーソルを消去する
+                    fKeyboardOff()
+                    // ソフトキーボードの表示禁止を解除する
+                    gEditText?.showSoftInputOnFocus = true
+                }
+                // ソフトキーボードの表示を禁止する
+                gEditText?.showSoftInputOnFocus = false
+                // 継続（イベントを消費せず、EditText本体の標準タッチ処理に任せる）
+                return@setOnTouchListener false
             }
             // 継続（イベントを消費せず、EditText本体の標準タッチ処理に任せる）
             false
         }
+
+    }
+
+    // 現在のカーソル位置が何行目かを返す（改行コードの個数を数えて論理行番号（1始まり）」を返す）
+    fun fGetLineNoFromCursorPosition(): Int {
+        // カーソル位置を取得する（テキスト全体から何文字目か）
+        var yCursorPosition = gEditText?.selectionStart ?: -1
+        if (yCursorPosition == -1) return 0
+        // 安全対策：yCursorPositionがテキスト長を超えていたらテキスト長に矯正する
+        yCursorPosition = yCursorPosition.coerceAtMost(gText.length)
+        // 先頭からカーソル位置までの文字列を切り出す
+        val yString = gText.substring(0, yCursorPosition)
+        // その中に改行コードがいくつあるかカウントして行数とする（+1して1始まりの行番号とする）
+        val yLineNo = yString.count { it == '\n' } + 1
+        // 行番号を返す
+        return yLineNo
     }
 
     // minLinesをセット
@@ -401,7 +432,7 @@ class MainActivity : AppCompatActivity() {
                 // ページ番号を目次にする
                 gPageNo = 0
 
-            // 目次なら
+                // 目次なら
             } else {
                 // 目次ページから戻る際のページ番号とする
                 gPageNo = gReturnPageNo
@@ -727,6 +758,7 @@ class MainActivity : AppCompatActivity() {
         var yText: String = xText.substringAfter("\n", "")
         return yText
     }
+
 }
 
 
