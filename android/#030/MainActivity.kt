@@ -818,8 +818,10 @@ class MainActivity : AppCompatActivity() {
     fun fPageTitleUpdate(xPageNo: Int, xPageTitle: String){
         // ページ番号がリストの数の範囲内なら
         if (xPageNo >= 0 && xPageNo < gPageTitleList.size) {
+            // ファイル番号を取得する
+            var yFileNo = fPageNoToFileNo(gPageNo)
             // ページタイトルのリストを更新する
-            gPageTitleList[xPageNo] = "${xPageNo} ${xPageTitle}"
+            gPageTitleList[xPageNo] = "${yFileNo} ${xPageTitle}"
         }
     }
 
