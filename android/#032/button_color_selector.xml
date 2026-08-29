@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 押した時の色 -->
+    <item android:state_pressed="true" android:color="#C2D6F2" />
+    <!-- マウスホバー時は透明表示：デバッグ用なので無くても良い -->
+    <item android:state_hovered="true" android:color="#00000000" />
+    <!-- 離した時（通常）の色 -->
+    <item android:color="#DADAF2" />
+</selector>
