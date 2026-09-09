@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_textBG"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/PageTitleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="@drawable/border_corner_radius"
+        android:saveEnabled="false"
+        android:gravity="start|top"
+        android:inputType="text"
+        android:maxLines="1"
+        android:text=""
+        android:hint="ページタイトル"
+        android:textColorHint="@color/color_hint"
+        android:textSize="30sp" />
+
+    <ScrollView
+        android:id="@+id/EditScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:background="@color/color_textBG"
+                android:gravity="start|top"
+                android:hint="メモ"
+                android:textColorHint="@color/color_hint"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:saveEnabled="false"
+                android:text=""
+                android:textSize="30sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

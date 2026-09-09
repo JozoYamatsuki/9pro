@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_mainBG">#ADBFD9</color> <!-- メイン画面のBG色 -->
+    <color name="color_text">#000000</color> <!-- テキストの色 -->
+    <color name="color_textBG">#E6E6FF</color> <!-- テキストのBG色 -->
+    <color name="color_update">#F44336</color> <!-- 変更マーク「＊」の色 -->
+    <color name="color_border">#808080</color> <!-- 仕切り線の色 -->
+    <color name="color_pressed">#C2D6F2</color> <!-- ボタンを押した時のBG色 -->
+    <color name="color_release">#DADAF2</color> <!-- ボタンを離している時のBG色 -->
+    <color name="color_hint">#707080</color> <!-- ヒントのテキストの色 -->
+    <color name="color_subWinBG">#FFFFFF</color> <!-- サブウィンドウのBg色 -->
+    <color name="color_cleanness">#00000000</color> <!-- 透明色 -->
+</resources>

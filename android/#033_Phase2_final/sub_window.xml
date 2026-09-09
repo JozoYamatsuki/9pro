@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/color_subWinBG"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/AddFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="0dp">
+        <Button
+            android:id="@+id/PageAddButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/button_color_selector"
+            android:paddingStart="42dp"
+            android:paddingEnd="16dp"
+            android:text="このページの次にページを追加する"
+            android:textAlignment="textStart"
+            android:textColor="@color/color_text" />
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:foreground="@drawable/btn_add" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/RepFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="0dp">
+        <Button
+            android:id="@+id/PageRepButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="42dp"
+            android:paddingEnd="16dp"
+            android:backgroundTint="@color/button_color_selector"
+            android:text="このページと次のページを入れ替える"
+            android:textAlignment="textStart"
+            android:textColor="@color/color_text" />
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:foreground="@drawable/btn_rep" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/DelFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="0dp">
+        <Button
+            android:id="@+id/PageDelButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="42dp"
+            android:paddingEnd="16dp"
+            android:backgroundTint="@color/button_color_selector"
+            android:text="このページを削除する"
+            android:textAlignment="textStart"
+            android:textColor="@color/color_text" />
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:foreground="@drawable/btn_del" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/CloseFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+        <Button
+            android:id="@+id/PageExitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="42dp"
+            android:paddingEnd="16dp"
+            android:backgroundTint="@color/button_color_selector"
+            android:text="閉じる"
+            android:textColor="@color/color_text" />
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:foreground="@drawable/btn_close" />
+    </FrameLayout>
+
+</LinearLayout>
