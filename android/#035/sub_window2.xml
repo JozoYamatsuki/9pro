@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/color_subWinBG"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/BackupFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="0dp">
+        <Button
+            android:id="@+id/BackupButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/button_color_selector"
+            android:paddingStart="42dp"
+            android:paddingEnd="16dp"
+            android:text="データのバックアップ"
+            android:textAlignment="textStart"
+            android:textColor="@color/color_text" />
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:foreground="@drawable/btn_backup" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/RestoreFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="0dp">
+        <Button
+            android:id="@+id/RestoreButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="42dp"
+            android:paddingEnd="16dp"
+            android:backgroundTint="@color/button_color_selector"
+            android:text="データの復元"
+            android:textAlignment="textStart"
+            android:textColor="@color/color_text" />
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:foreground="@drawable/btn_restore" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/FontSetFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="0dp">
+        <Button
+            android:id="@+id/FontSetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="42dp"
+            android:paddingEnd="16dp"
+            android:backgroundTint="@color/button_color_selector"
+            android:text="フォントサイズ設定"
+            android:textAlignment="textStart"
+            android:textColor="@color/color_text" />
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:foreground="@drawable/btn_fontsize" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/SettingsExitFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+        <Button
+            android:id="@+id/SettingsExitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="42dp"
+            android:paddingEnd="16dp"
+            android:backgroundTint="@color/button_color_selector"
+            android:text="閉じる"
+            android:textColor="@color/color_text" />
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:foreground="@drawable/btn_close" />
+    </FrameLayout>
+
+</LinearLayout>
