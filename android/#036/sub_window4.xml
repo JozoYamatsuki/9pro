@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/color_subWinBG"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/RowUpButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/button_color_selector"
+        android:foreground="@drawable/btn_rowup"
+        android:contentDescription="上へ" />
+
+    <Button
+        android:id="@+id/RowDownButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/button_color_selector"
+        android:foreground="@drawable/btn_rowdown"
+        android:contentDescription="下へ" />
+
+    <Button
+        android:id="@+id/RowExitButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/button_color_selector"
+        android:foreground="@drawable/btn_close"
+        android:contentDescription="閉じる" />
+
+</LinearLayout>
