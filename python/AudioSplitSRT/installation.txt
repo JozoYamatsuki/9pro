@@ -1,0 +1,37 @@
+＜＜＜AudioSplitSRT実行イメージの作成方法＞＞＞
+
+★PyCharmを起動（PyCharmのインストールは過去動画を参照）
+PyCharmを起動する
+プロジェクトをPythonProject_3.12にする
+新規にPythonファイルを追加する（名前にAudioSplitSRT）
+GitHubからソースコードをコピー（Copy raw file）して
+AudioSplitSRT.pyに貼り付ける
+
+★ライブラリのインストール（ターミナルで下記を貼り付けてエンター）
+pip install pydub tkinterdnd2-universal
+
+★実行イメージ(exe)の作成（ターミナルで下記を貼り付けてエンター）
+pip install pyinstaller
+pyinstaller ./AudioSplitSRT.py --onefile --noconsole
+
+★プロジェクトのフォルダ（場所）について
+PyCharmの左側エリアのプロジェクト名の横に記載されている
+実行イメージ(exe)はその下のdistフォルダに作成される
+
+★ffmpegを取得して配置
+https://ffmpeg.org/download.html
+Windowsのマークを選んで
+Windows builds from gyan.devをクリック
+ffmpeg-release-essentials.zipをクリックしてダウンロード
+zip内のbinにあるffmpeg.exeとffprobe.exeを
+プロジェクトのdistフォルダにコピーする
+
+★ツール(exe)の起動方法
+AudioSplitSRT.exeをダブルクリックする
+
+
+
+＜補足＞
+★実行イメージ(exe)ではなくPyCharm上で実行する場合（ターミナルで下記を貼り付けてエンター）
+python .\AudioSplitSRT.py
+
