@@ -1,0 +1,29 @@
+＜＜＜AudioSelector実行イメージの作成方法＞＞＞
+
+★PyCharmを起動（PyCharmのインストールは過去動画を参照）
+PyCharmを起動する
+プロジェクトをPythonProject_3.14にする
+新規にPythonファイルを追加する（名前にAudioSelector）
+GitHubからソースコードをコピー（Copy raw file）して
+AudioSelector.pyに貼り付ける
+
+★ライブラリのインストール（ターミナルで下記を貼り付けてエンター）
+pip install pygame-ce send2trash tkinterdnd2 opencv-python numpy
+
+★実行イメージ(exe)の作成（ターミナルで下記を貼り付けてエンター）
+pip install pyinstaller
+pyinstaller ./AudioSelector.py --onefile --noconsole
+
+★プロジェクトのフォルダ（場所）について
+PyCharmの左側エリアのプロジェクト名の横に記載されている
+実行イメージ(exe)はその下のdistフォルダに作成される
+
+★ツール(exe)の起動方法
+AudioSelector.exeをダブルクリックする
+
+
+
+＜補足＞
+★実行イメージ(exe)ではなくPyCharm上で実行する場合（ターミナルで下記を貼り付けてエンター）
+python .\AudioSelector.py
+
